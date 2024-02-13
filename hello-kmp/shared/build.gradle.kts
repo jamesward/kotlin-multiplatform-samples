@@ -35,9 +35,26 @@ kotlin {
     mingwX64()
 
     wasmWasi {
+        binaries.library()
         nodejs()
     }
     wasmJs {
+        binaries.library()
         browser()
     }
+
+    sourceSets {
+        commonTest {
+            dependencies {
+                implementation(libs.kotlin.test)
+            }
+        }
+    }
+}
+
+// needed to get the right version of Node for wasmWasi
+rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().apply {
+    //nodeVersion = "21.6.1"
+    nodeVersion = "21.0.0-v8-canary202309143a48826a08"
+    nodeDownloadBaseUrl = "https://nodejs.org/download/v8-canary"
 }
