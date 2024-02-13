@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.hellokmp.shared.hello
+import com.example.hellokmp.shared.platform
 import com.example.hellokmp.ui.theme.HelloKMPTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +23,6 @@ class MainActivity : ComponentActivity() {
             HelloKMPTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -31,9 +32,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = hello() + " on " + platform,
         modifier = modifier
     )
 }
@@ -42,6 +43,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     HelloKMPTheme {
-        Greeting("Android")
+        Greeting()
     }
 }
