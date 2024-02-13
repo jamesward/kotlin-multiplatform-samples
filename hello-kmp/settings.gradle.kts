@@ -12,12 +12,11 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
     }
 }
 
-rootProject.name = "Hello KMP"
+rootProject.name = "hello-kmp"
 include(":app")
