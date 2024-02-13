@@ -12,7 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.hellokmp.shared.hello
-import com.example.hellokmp.shared.platform
 import com.example.hellokmp.ui.theme.HelloKMPTheme
 
 class MainActivity : ComponentActivity() {
@@ -34,7 +33,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(modifier: Modifier = Modifier) {
     Text(
-        text = hello() + " on " + platform,
+        text = hello(),
         modifier = modifier
     )
 }
