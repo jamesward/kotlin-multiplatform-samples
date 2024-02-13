@@ -20,3 +20,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "hello-kmp"
 include(":app")
+include(":shared")
