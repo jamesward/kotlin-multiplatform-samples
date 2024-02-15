@@ -5,6 +5,7 @@ plugins {
 
 kotlin {
     androidLibrary {
+        withAndroidTestOnJvm { }
         namespace = "com.example.hellokmp.shared"
         compileSdk = 34
     }
