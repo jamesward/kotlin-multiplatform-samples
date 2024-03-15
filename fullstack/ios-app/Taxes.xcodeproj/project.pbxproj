@@ -7,19 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB3601A42A0D7FA400899284 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3601A32A0D7FA400899284 /* ContentView.swift */; };
+		CB9A22D52BA35BB900DC82ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A22D42BA35BB900DC82ED /* ContentView.swift */; };
+		CB9A22EA2BA35FE100DC82ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9A22E92BA35FE100DC82ED /* Assets.xcassets */; };
+		CB9A22ED2BA35FF800DC82ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9A22EB2BA35FF800DC82ED /* Preview Assets.xcassets */; };
+		CB9A22EF2BA361AA00DC82ED /* TaxesShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9A22EE2BA361AA00DC82ED /* TaxesShared.framework */; };
+		CB9A22F02BA361AA00DC82ED /* TaxesShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB9A22EE2BA361AA00DC82ED /* TaxesShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBEBA97E278A264B0032E6E5 /* TaxesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEBA97D278A264B0032E6E5 /* TaxesApp.swift */; };
-		CBEBA982278A264C0032E6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEBA981278A264C0032E6E5 /* Assets.xcassets */; };
-		CBEBA985278A264C0032E6E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEBA984278A264C0032E6E5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CB9A22F12BA361AA00DC82ED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB9A22F02BA361AA00DC82ED /* TaxesShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		CB3601A32A0D7FA400899284 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB9A22D42BA35BB900DC82ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB9A22D72BA35E0500DC82ED /* Taxes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Taxes.framework; path = ../shared/build/bin/iosSimulatorArm64/debugFramework/Taxes.framework; sourceTree = "<group>"; };
+		CB9A22E92BA35FE100DC82ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Taxes/Assets.xcassets; sourceTree = "<group>"; };
+		CB9A22EB2BA35FF800DC82ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB9A22EE2BA361AA00DC82ED /* TaxesShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaxesShared.framework; path = ../shared/build/bin/iosSimulatorArm64/debugFramework/TaxesShared.framework; sourceTree = "<group>"; };
 		CBEBA97A278A264B0032E6E5 /* Taxes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taxes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEBA97D278A264B0032E6E5 /* TaxesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxesApp.swift; sourceTree = "<group>"; };
-		CBEBA981278A264C0032E6E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CBEBA984278A264C0032E6E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CBEBA98F278CC53D0032E6E5 /* Kotlin-Bars-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Kotlin-Bars-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +44,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9A22EF2BA361AA00DC82ED /* TaxesShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB9A22D62BA35E0500DC82ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB9A22EE2BA361AA00DC82ED /* TaxesShared.framework */,
+				CB9A22D72BA35E0500DC82ED /* Taxes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB9A22EC2BA35FF800DC82ED /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CB9A22EB2BA35FF800DC82ED /* Preview Assets.xcassets */,
+			);
+			name = "Preview Content";
+			path = "Taxes/Preview Content";
+			sourceTree = "<group>";
+		};
 		CBEBA971278A264B0032E6E5 = {
 			isa = PBXGroup;
 			children = (
+				CB9A22EC2BA35FF800DC82ED /* Preview Content */,
+				CB9A22E92BA35FE100DC82ED /* Assets.xcassets */,
 				CBEBA97C278A264B0032E6E5 /* Taxes */,
 				CBEBA97B278A264B0032E6E5 /* Products */,
+				CB9A22D62BA35E0500DC82ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,21 +91,10 @@
 		CBEBA97C278A264B0032E6E5 /* Taxes */ = {
 			isa = PBXGroup;
 			children = (
-				CB3601A32A0D7FA400899284 /* ContentView.swift */,
-				CBEBA98F278CC53D0032E6E5 /* Kotlin-Bars-Info.plist */,
+				CB9A22D42BA35BB900DC82ED /* ContentView.swift */,
 				CBEBA97D278A264B0032E6E5 /* TaxesApp.swift */,
-				CBEBA981278A264C0032E6E5 /* Assets.xcassets */,
-				CBEBA983278A264C0032E6E5 /* Preview Content */,
 			);
 			path = Taxes;
-			sourceTree = "<group>";
-		};
-		CBEBA983278A264C0032E6E5 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CBEBA984278A264C0032E6E5 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,13 +108,14 @@
 				CBEBA976278A264B0032E6E5 /* Sources */,
 				CBEBA977278A264B0032E6E5 /* Frameworks */,
 				CBEBA978278A264B0032E6E5 /* Resources */,
+				CB9A22F12BA361AA00DC82ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Taxes;
-			productName = "Kotlin Bars";
+			productName = Taxes;
 			productReference = CBEBA97A278A264B0032E6E5 /* Taxes.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -128,8 +157,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBEBA985278A264C0032E6E5 /* Preview Assets.xcassets in Resources */,
-				CBEBA982278A264C0032E6E5 /* Assets.xcassets in Resources */,
+				CB9A22EA2BA35FE100DC82ED /* Assets.xcassets in Resources */,
+				CB9A22ED2BA35FF800DC82ED /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :compose:embedAndSignAppleFrameworkForXcode\n";
+			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -162,7 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3601A42A0D7FA400899284 /* ContentView.swift in Sources */,
+				CB9A22D52BA35BB900DC82ED /* ContentView.swift in Sources */,
 				CBEBA97E278A264B0032E6E5 /* TaxesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,17 +320,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"BARS_URL[sdk=iphonesimulator*]" = "http://localhost:8080/api/bars";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Taxes/Preview Content\"";
 				DEVELOPMENT_TEAM = B6VWQJ68PP;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../compose/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Kotlin-Bars-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Kotlin Bars";
+				INFOPLIST_KEY_CFBundleDisplayName = Taxes;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,12 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					KotlinbarsCompose,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jamesward.Kotlin-Bars";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.fullstack.iosapp.Taxes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -332,18 +354,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				BARS_URL = "";
-				"BARS_URL[sdk=iphonesimulator*]" = "http://localhost:8080/api/bars";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Taxes/Preview Content\"";
 				DEVELOPMENT_TEAM = B6VWQJ68PP;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../compose/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Kotlin-Bars-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Kotlin Bars";
+				INFOPLIST_KEY_CFBundleDisplayName = Taxes;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,12 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					KotlinbarsCompose,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jamesward.Kotlin-Bars";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.fullstack.iosapp.Taxes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -15,9 +15,27 @@ kotlin {
         compileSdk = 34
     }
 
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
+    iosX64 {
+        binaries {
+            framework {
+                baseName = "TaxesShared"
+            }
+        }
+    }
+    iosArm64 {
+        binaries {
+            framework {
+                baseName = "TaxesShared"
+            }
+        }
+    }
+    iosSimulatorArm64 {
+        binaries {
+            framework {
+                baseName = "TaxesShared"
+            }
+        }
+    }
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
